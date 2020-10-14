@@ -11,7 +11,7 @@ interface UnsplashApi {
         const val CLIENT_ID = "";//todo access key
     }
 
-    @Headers("Accept-Version: v1", "Authorization: CLIENT-ID $CLIENT_ID")
+    @Headers("Accept-Version: v1", "Authorization: Client-ID $CLIENT_ID")
     @GET("/search/photos")
     suspend fun searchPhotos(
         @Query("query") query: String,

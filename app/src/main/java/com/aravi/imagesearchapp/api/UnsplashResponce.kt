@@ -5,5 +5,5 @@ import com.aravi.imagesearchapp.data.UnsplashPhoto
 data class UnsplashResponce(
     val total: Long,
     val total_pages: Long,
-    val result: List<UnsplashPhoto>
+    val results: List<UnsplashPhoto>
 )

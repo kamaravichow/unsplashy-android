@@ -6,9 +6,9 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class UnsplashPhoto(
     val id: String,
-    val description: String,
+    val description: String?,
     val urls: UnsplashPhotoUrls,
-    val users: UnsplashUser
+    val user: UnsplashUser
 ) : Parcelable {
 
     @Parcelize
@@ -17,7 +17,7 @@ data class UnsplashPhoto(
         val full: String,
         val regular: String,
         val small: String,
-        val thumb: String
+        val thumb: String,
     ) : Parcelable
 
     @Parcelize
@@ -25,7 +25,6 @@ data class UnsplashPhoto(
         val name: String,
         val username: String
     ) : Parcelable {
-        val attributionUrl get() = "https://unsplash.com/$username?utm_source=MVVMimageSearch&utm_medium=referral"
+        val attributionUrl get() = "https://unsplash.com/$username?utm_source=ImageSearchApp&utm_medium=referral"
     }
-
 }

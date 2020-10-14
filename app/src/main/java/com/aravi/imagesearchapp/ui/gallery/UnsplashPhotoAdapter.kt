@@ -43,7 +43,7 @@ class UnsplashPhotoAdapter : PagingDataAdapter<UnsplashPhoto, UnsplashPhotoAdapt
                     .error(R.drawable.ic_error)
                     .into(imageView)
 
-                textViewUsername.text = photo.users.username
+                textViewUsername.text = photo.user.username
             }
         }
     }
